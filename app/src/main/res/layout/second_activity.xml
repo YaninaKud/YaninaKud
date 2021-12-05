@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_background_color">
+
+    <TextView
+        android:id="@+id/Hello"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="50sp"
+        android:fontFamily="monospace"
+        android:text="@string/Hello"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/user_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Hello"
+        android:layout_marginHorizontal="70sp"
+        android:layout_marginStart="70sp"
+        android:layout_marginTop="70sp"
+        android:layout_marginEnd="70sp"
+        android:layout_marginBottom="70sp"
+        android:ems="10"
+        android:hint="@string/enter_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="@color/teal_700" />
+
+    <EditText
+        android:id="@+id/your_age"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_field"
+        android:layout_marginHorizontal="70sp"
+        android:layout_marginTop="-37dp"
+        android:ems="10"
+        android:hint="@string/your_age"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="@color/teal_700"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/your_age"
+        android:layout_marginHorizontal="100sp"
+        android:layout_marginTop="20sp"
+        android:text="@string/button_for_push" />
+
+    <TextView
+        android:id="@+id/result_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_marginStart="70sp"
+        android:layout_marginTop="70sp"
+        android:layout_marginEnd="70sp"
+        android:fontFamily="monospace"
+        android:text="@string/result"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyFirstApplicationVer2</string>
+    <string name="Hello">Hello, my Dear Friend</string>
+    <string name="button_for_push">Button for Push</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="your_age">Enter your date of birth (dd.mm.yyyy)</string>
+    <string name="result">Information</string>
+</resources>
