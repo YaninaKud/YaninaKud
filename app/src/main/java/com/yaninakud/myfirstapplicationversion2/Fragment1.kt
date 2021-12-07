@@ -7,11 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 private const val TAG = "MainActivity"
 
 class Fragment1 : Fragment() {
+
+    private var your_age: EditText? = null
+    private var result_star: Button? = null
+    private var KEY = "KEY"
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -20,6 +26,7 @@ class Fragment1 : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         Log.d(TAG, "Fragment1 - onCreate")
     }
 
@@ -28,13 +35,31 @@ class Fragment1 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_1, container, false)
-        val button: Button = view.findViewById(R.id.button)
+        result_star = view.findViewById(R.id.btn)
+        your_age = view.findViewById(R.id.age)
 
+        onClickListener()
         Log.d(TAG, "Fragment1 - onCreateView")
 
         return view
     }
+    val fragment = Fragment2()
+    val bundle = Bundle()
 
+    private fun onClickListener() = result_star?.setOnClickListener {
+        if (your_age?.text?.toString()?.trim()?.equals("")!!)
+            Toast.makeText(context, "Введите дату рождения", Toast.LENGTH_LONG).show()
+        else {
+            bundle.putString(KEY, your_age?.text.toString())
+            fragment.arguments = bundle
+
+            activity?.supportFragmentManager
+                ?.beginTransaction()
+                ?.replace(R.id.fragment_container, fragment)
+                ?.addToBackStack(fragment.tag)
+                ?.commit()
+        }
+    }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         Log.d(TAG, "Fragment1 - onActivityCreated")
@@ -44,29 +69,6 @@ class Fragment1 : Fragment() {
         super.onStart()
         Log.d(TAG, "Fragment1 - onStart")
     }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d(TAG, "Fragment1 - onResume")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d(TAG, "Fragment1 - onStart")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d(TAG, "Fragment1 - onStop")
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        Log.d(TAG, "Fragment1 - onDestroyView")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d(TAG, "Fragment1 - onDestroy")
-    }
 }
+
+

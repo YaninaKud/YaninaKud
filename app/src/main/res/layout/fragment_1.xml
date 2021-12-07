@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragment1"
+    tools:context="com.yaninakud.myfirstapplicationversion2.Fragment1"
     android:background="@color/my_background_color">
 
     <TextView
         android:id="@+id/Hello"
         android:layout_width="match_parent"
         android:layout_height="46dp"
-        android:layout_marginTop="50sp"
         android:fontFamily="monospace"
         android:text="@string/Hello"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="28sp"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        android:layout_marginTop="50dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="37dp" />
 
     <EditText
         android:id="@+id/enter_name"
@@ -25,46 +28,50 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Hello"
         android:layout_marginHorizontal="70sp"
-        android:layout_marginStart="70sp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="70sp"
-        android:layout_marginBottom="70sp"
+        android:layout_marginTop="134dp"
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textColorHint="@color/teal_700" />
+        android:textColorHint="@color/teal_700"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="106dp" />
 
     <EditText
-        android:id="@+id/your_age"
+        android:id="@+id/age"
         android:layout_width="284dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/enter_name"
         android:layout_marginHorizontal="70sp"
-        android:layout_marginTop="-37dp"
         android:ems="10"
         android:hint="@string/your_age"
-        android:inputType="textPersonName"
+        android:inputType="date"
         android:minHeight="48dp"
         android:textColorHint="@color/teal_700"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="197dp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/your_age"
-        android:layout_marginHorizontal="100sp"
-        android:layout_marginTop="19dp"
-        android:text="@string/button_for_push" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/face"
         android:layout_width="153dp"
         android:layout_height="87dp"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
-        app:srcCompat="@drawable/face" />
+        android:layout_below="@+id/age"
+        android:layout_marginTop="38dp"
+        android:layout_marginHorizontal="150dp"
+        app:srcCompat="@drawable/face"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/face"
+        android:layout_marginTop="-2dp"
+        android:orientation="horizontal"
+        android:text="@string/result_star"
+        tools:ignore="MissingConstraints" />
 
 </RelativeLayout>

@@ -7,7 +7,8 @@
     <color name="teal_700">#ccc</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="my_background_color">#444442</color>
-    <color name="red">#A33830</color>
-1
+    <color name="my_background_color">#23A128</color>
+    <color name="red">#F38880</color>
+    <color name="number_2">#37BFB3</color>
+    1
 </resources>

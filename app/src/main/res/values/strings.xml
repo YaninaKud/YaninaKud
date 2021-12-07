@@ -3,8 +3,13 @@
     <string name="Hello">Hello, my Dear Friend</string>
     <string name="button_for_push">Button for Push</string>
     <string name="name">Enter your name</string>
-    <string name="your_age">Enter your date of birth (dd.mm.yyyy)</string>
+    <string name="your_age">Enter your date of birth (dd.mm)</string>
     <string name="result">Information</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_app">Welcome to my App</string>
+    <string name="result_star">Result</string>
+    <string name="_fragment_2">fragment_2</string>
+    <string name="_fragment_1">fragment_1</string>
+    <string name="zodiac_sign">Ваш результат</string>
 </resources>
